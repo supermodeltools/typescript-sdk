@@ -1,4 +1,4 @@
-## @supermodeltools/sdk@0.3.7
+## @supermodeltools/sdk@0.3.8
 
 This generator creates TypeScript/JavaScript client that utilizes [Fetch API](https://fetch.spec.whatwg.org/). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install @supermodeltools/sdk@0.3.7 --save
+npm install @supermodeltools/sdk@0.3.8 --save
 ```
 
 _unPublished (not recommended):_
