@@ -13,7 +13,7 @@ npm install @supermodeltools/sdk
 
 ## Quick Start
 
-Get your API key from the [Supermodel Dashboard](https://supermodeltools.com/dashboard) and set it as `SUPERMODEL_API_KEY`.
+Get your API key from the [Supermodel Dashboard](https://dashboard.supermodeltools.com) and set it as `SUPERMODEL_API_KEY`.
 
 ```typescript
 import { Configuration, DefaultApi } from '@supermodeltools/sdk';
