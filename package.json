@@ -1,19 +1,36 @@
 {
   "name": "@supermodeltools/sdk",
   "version": "0.3.8",
-  "description": "OpenAPI client for @supermodeltools/sdk",
-  "author": "OpenAPI-Generator",
+  "description": "TypeScript SDK for the Supermodel API - code graph generation and analysis",
+  "author": "Supermodel <support@supermodel.software>",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+    "url": "git+https://github.com/supermodeltools/typescript-sdk.git"
   },
+  "homepage": "https://docs.supermodeltools.com",
+  "bugs": {
+    "url": "https://github.com/supermodeltools/typescript-sdk/issues"
+  },
+  "keywords": [
+    "supermodel",
+    "sdk",
+    "api-client",
+    "code-graph",
+    "static-analysis",
+    "typescript"
+  ],
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "module": "./dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsc && tsc -p tsconfig.esm.json",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "typescript": "^4.0 || ^5.0"

@@ -1,46 +1,53 @@
-## @supermodeltools/sdk@0.3.8
+# Supermodel TypeScript SDK
 
-This generator creates TypeScript/JavaScript client that utilizes [Fetch API](https://fetch.spec.whatwg.org/). The generated Node module can be used in the following environments:
+[![npm](https://img.shields.io/npm/v/@supermodeltools/sdk)](https://www.npmjs.com/package/@supermodeltools/sdk)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 
-Environment
-* Node.js
-* Webpack
-* Browserify
+TypeScript client for the [Supermodel API](https://docs.supermodeltools.com) - code graph generation and static analysis.
 
-Language level
-* ES5 - you must have a Promises/A+ library installed
-* ES6
+## Install
 
-Module system
-* CommonJS
-* ES6 module system
-
-It can be used in both TypeScript and JavaScript. In TypeScript, the definition will be automatically resolved via `package.json`. ([Reference](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html))
-
-### Building
-
-To build and compile the typescript sources to javascript use:
-```
-npm install
-npm run build
+```bash
+npm install @supermodeltools/sdk
 ```
 
-### Publishing
+## Quick Start
 
-First build the package then run `npm publish`
+```typescript
+import { Configuration, DefaultApi } from '@supermodeltools/sdk';
+import { readFile } from 'node:fs/promises';
 
-### Consuming
+const config = new Configuration({
+  basePath: 'https://api.supermodeltools.com',
+  apiKey: process.env.SUPERMODEL_API_KEY,
+});
 
-navigate to the folder of your consuming project and run one of the following commands.
+const api = new DefaultApi(config);
 
-_published:_
+// Create a ZIP of your repo: git archive -o /tmp/repo.zip HEAD
+const file = new Blob([await readFile('/tmp/repo.zip')], { type: 'application/zip' });
 
+const result = await api.generateSupermodelGraph({
+  idempotencyKey: 'my-repo:supermodel:abc123',
+  file,
+});
+
+console.log(result.graph.nodes.length, 'nodes');
 ```
-npm install @supermodeltools/sdk@0.3.8 --save
-```
 
-_unPublished (not recommended):_
+## Methods
 
-```
-npm install PATH_TO_GENERATED_PACKAGE --save
-```
+| Method | Description |
+|--------|-------------|
+| `generateDependencyGraph` | File-level dependency graph |
+| `generateCallGraph` | Function-level call graph |
+| `generateDomainGraph` | Domain model classification |
+| `generateParseGraph` | AST parse tree relationships |
+| `generateSupermodelGraph` | Full Supermodel IR bundle |
+
+All methods require `idempotencyKey` (string) and `file` (Blob) parameters.
+
+## Links
+
+- [API Documentation](https://docs.supermodeltools.com)
+- [OpenAPI Spec](https://www.npmjs.com/package/@supermodeltools/openapi-spec)
