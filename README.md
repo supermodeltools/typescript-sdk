@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@supermodeltools/sdk)](https://www.npmjs.com/package/@supermodeltools/sdk)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![CI](https://github.com/supermodeltools/typescript-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/supermodeltools/typescript-sdk/actions/workflows/ci.yml)
 
 TypeScript client for the [Supermodel API](https://docs.supermodeltools.com) - code graph generation and static analysis.
 
