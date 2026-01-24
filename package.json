@@ -1,6 +1,6 @@
 {
   "name": "@supermodeltools/sdk",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "TypeScript SDK for the Supermodel API - code graph generation and analysis",
   "author": "Supermodel <support@supermodel.software>",
   "license": "UNLICENSED",

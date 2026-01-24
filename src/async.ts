@@ -38,19 +38,19 @@ import type {
 export interface AsyncClientOptions {
   /**
    * Maximum time to wait for a job to complete (in milliseconds).
-   * Default: 300000 (5 minutes)
+   * Default: 900000 (15 minutes)
    */
   timeoutMs?: number;
 
   /**
    * Default retry interval when server doesn't specify (in milliseconds).
-   * Default: 5000 (5 seconds)
+   * Default: 10000 (10 seconds)
    */
   defaultRetryIntervalMs?: number;
 
   /**
    * Maximum number of polling attempts.
-   * Default: 60
+   * Default: 90
    */
   maxPollingAttempts?: number;
 
@@ -200,9 +200,9 @@ async function pollUntilComplete<T, R extends AsyncEnvelope<T>>(
   options: AsyncClientOptions
 ): Promise<T> {
   const {
-    timeoutMs = 300000,
-    defaultRetryIntervalMs = 5000,
-    maxPollingAttempts = 60,
+    timeoutMs = 900000,
+    defaultRetryIntervalMs = 10000,
+    maxPollingAttempts = 90,
     onPollingProgress,
     signal,
   } = options;
