@@ -27,39 +27,39 @@ import {
 } from './CodeGraphRelationship';
 
 /**
- * Unified code graph containing all nodes and relationships.
+ * Graph representation with Domain and Subdomain nodes
  * @export
- * @interface SupermodelIRGraph
+ * @interface DomainClassificationResponseGraph
  */
-export interface SupermodelIRGraph {
+export interface DomainClassificationResponseGraph {
     /**
-     * All nodes from parse graph, call graph, and domain classification.
+     * 
      * @type {Array<CodeGraphNode>}
-     * @memberof SupermodelIRGraph
+     * @memberof DomainClassificationResponseGraph
      */
     nodes: Array<CodeGraphNode>;
     /**
-     * All relationships including contains, imports, calls, and belongsTo.
+     * 
      * @type {Array<CodeGraphRelationship>}
-     * @memberof SupermodelIRGraph
+     * @memberof DomainClassificationResponseGraph
      */
     relationships: Array<CodeGraphRelationship>;
 }
 
 /**
- * Check if a given object implements the SupermodelIRGraph interface.
+ * Check if a given object implements the DomainClassificationResponseGraph interface.
  */
-export function instanceOfSupermodelIRGraph(value: object): value is SupermodelIRGraph {
+export function instanceOfDomainClassificationResponseGraph(value: object): value is DomainClassificationResponseGraph {
     if (!('nodes' in value) || value['nodes'] === undefined) return false;
     if (!('relationships' in value) || value['relationships'] === undefined) return false;
     return true;
 }
 
-export function SupermodelIRGraphFromJSON(json: any): SupermodelIRGraph {
-    return SupermodelIRGraphFromJSONTyped(json, false);
+export function DomainClassificationResponseGraphFromJSON(json: any): DomainClassificationResponseGraph {
+    return DomainClassificationResponseGraphFromJSONTyped(json, false);
 }
 
-export function SupermodelIRGraphFromJSONTyped(json: any, ignoreDiscriminator: boolean): SupermodelIRGraph {
+export function DomainClassificationResponseGraphFromJSONTyped(json: any, ignoreDiscriminator: boolean): DomainClassificationResponseGraph {
     if (json == null) {
         return json;
     }
@@ -70,7 +70,7 @@ export function SupermodelIRGraphFromJSONTyped(json: any, ignoreDiscriminator: b
     };
 }
 
-export function SupermodelIRGraphToJSON(value?: SupermodelIRGraph | null): any {
+export function DomainClassificationResponseGraphToJSON(value?: DomainClassificationResponseGraph | null): any {
     if (value == null) {
         return value;
     }
