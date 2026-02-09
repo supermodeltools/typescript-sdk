@@ -1,5 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
+export * from './AliveCodeItem';
 export * from './ClassificationStats';
 export * from './CodeGraphEnvelope';
 export * from './CodeGraphEnvelopeAsync';
@@ -8,6 +9,10 @@ export * from './CodeGraphEnvelopeMetadata';
 export * from './CodeGraphNode';
 export * from './CodeGraphRelationship';
 export * from './CodeGraphStats';
+export * from './DeadCodeAnalysisMetadata';
+export * from './DeadCodeAnalysisResponse';
+export * from './DeadCodeAnalysisResponseAsync';
+export * from './DeadCodeCandidate';
 export * from './DomainClassAssignment';
 export * from './DomainClassificationResponse';
 export * from './DomainClassificationResponseAsync';
@@ -16,6 +21,7 @@ export * from './DomainFileAssignment';
 export * from './DomainFunctionAssignment';
 export * from './DomainRelationship';
 export * from './DomainSummary';
+export * from './EntryPoint';
 export * from './ErrorDetailsInner';
 export * from './FunctionDescription';
 export * from './JobStatus';
