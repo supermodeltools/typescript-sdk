@@ -4,6 +4,16 @@ Official TypeScript/JavaScript SDK for the [Supermodel API](https://supermodelto
 
 Generate code graphs, dependency analysis, and domain models from your source code repositories.
 
+---
+
+## ⭐ Star the Supermodel Ecosystem
+
+If this is useful, please star our tools — it helps us grow:
+
+[![mcp](https://img.shields.io/github/stars/supermodeltools/mcp?style=social)](https://github.com/supermodeltools/mcp) &nbsp;[![mcpbr](https://img.shields.io/github/stars/supermodeltools/mcpbr?style=social)](https://github.com/supermodeltools/mcpbr) &nbsp;[![typescript-sdk](https://img.shields.io/github/stars/supermodeltools/typescript-sdk?style=social)](https://github.com/supermodeltools/typescript-sdk) &nbsp;[![arch-docs](https://img.shields.io/github/stars/supermodeltools/arch-docs?style=social)](https://github.com/supermodeltools/arch-docs) &nbsp;[![dead-code-hunter](https://img.shields.io/github/stars/supermodeltools/dead-code-hunter?style=social)](https://github.com/supermodeltools/dead-code-hunter) &nbsp;[![Uncompact](https://img.shields.io/github/stars/supermodeltools/Uncompact?style=social)](https://github.com/supermodeltools/Uncompact) &nbsp;[![narsil-mcp](https://img.shields.io/github/stars/supermodeltools/narsil-mcp?style=social)](https://github.com/supermodeltools/narsil-mcp)
+
+---
+
 ## Installation
 
 ```bash
